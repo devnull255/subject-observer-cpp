@@ -54,7 +54,12 @@ public:
 int main() {
     Alarm a = Alarm();
     Horn h  = Horn();
+    Horn h2 = Horn();
+    Horn h3 = Horn();
+
     a.register_observer(&h);
+    a.register_observer(&h2);
+    a.register_observer(&h2);
     a.triggered();
     return 0;
 }
